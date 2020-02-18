@@ -6,11 +6,17 @@ public class Student {
     private String lastName;
     private String role;
 
+    public static void main(String[] args) {
+
+
+
+    }
     public Student(int id, String firstName, String lastName, String role) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.role = role;
+
     }
 
     @Override
