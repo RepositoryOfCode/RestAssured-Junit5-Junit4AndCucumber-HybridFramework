@@ -143,7 +143,6 @@ public class BookitStudentTests {
         then().
                 statusCode(201).
                 body(endsWith("has been added to database."));
-
     }
 
 

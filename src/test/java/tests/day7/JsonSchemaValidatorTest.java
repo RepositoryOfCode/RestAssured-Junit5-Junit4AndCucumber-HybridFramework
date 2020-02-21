@@ -1,5 +1,6 @@
 package tests.day7;
 
+import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import utilities.ConfigurationReader;
 
@@ -19,7 +20,12 @@ public class JsonSchemaValidatorTest {
     @Test
     public void testSchema(){
         /// picks up the fiel from the resources folder
-        given().pathParam("id", 101).
+       Response r = given().get(ConfigurationReader.get("companyAPiBaseURL")+"teacher/all");
+       r.prettyPrint();
+       int id = r.path("teachers.teacherId[4]");
+        System.out.println(id);
+
+        given().pathParam("id", id).
 
             when().get(ConfigurationReader.get("companyAPiBaseURL")+"teacher/{id}").
                 prettyPeek().

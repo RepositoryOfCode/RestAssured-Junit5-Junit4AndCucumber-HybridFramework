@@ -19,7 +19,7 @@ public class TestsUsingPojos {
 
     @BeforeAll
     public static void setup() {
-        baseURI = "http://ec2-34-201-69-55.compute-1.amazonaws.com:1000/ords/hr";
+        baseURI = "http://ec2-52-91-94-225.compute-1.amazonaws.com:1000/ords/hr";
     }
 
     @Test

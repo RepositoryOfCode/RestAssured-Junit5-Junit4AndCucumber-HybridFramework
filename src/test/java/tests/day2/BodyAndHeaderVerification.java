@@ -37,8 +37,8 @@ public class BodyAndHeaderVerification {
 
     @Test
     public void test2() {
-        JsonPath jsonPath = given().pathParam("id", "101").
-                when().get("/employees/{id}").jsonPath();
+        JsonPath jsonPath = given().pathParam("FFF", "101").
+                when().get("/employees/{FFF}").jsonPath();
         // Jsonpath --> class used to navigate through json body and extract values
 
 //        System.out.println(jsonPath.prettyPrint());

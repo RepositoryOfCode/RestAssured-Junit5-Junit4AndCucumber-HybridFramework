@@ -18,7 +18,7 @@ class JsonPathTests {
 
     @BeforeAll
     public static void setUp() {
-        baseURI = "http://ec2-34-201-69-55.compute-1.amazonaws.com:1000/ords/hr";
+        baseURI = "http://ec2-52-91-94-225.compute-1.amazonaws.com:1000/ords/hr";
     }
 
     /**
@@ -88,8 +88,8 @@ class JsonPathTests {
         // links.href[0] --> in the json file, find key links, then find its children href and get the first one
         String link = jsonPath.getString("links.href[0]");
         assertThat(link, equalTo("http://ec2-34-201-69-55.compute-1.amazonaws.com:1000/ords/hr/employees/100"));
-
     }
+
     /*
     Given accept type is JSON
     When users sends a GET request to "/employees"
@@ -151,7 +151,8 @@ class JsonPathTests {
         Response response = given().contentType(ContentType.JSON).                       // accept type is json
                 when().get("/countries");// when user makes get request
         List<String> actualList = response.jsonPath().getList("items.country_name");
-        System.out.println(actualList);
+        System.out.println("String+ "+response.jsonPath().getString("country_name"));
+        System.out.println("qwert"+actualList);
         List<String> expected = Arrays.asList("Argentina" ,"Brazil", "Mexico", "United States of America", "Zambia");
         System.out.println(expected);
 
@@ -181,7 +182,7 @@ class JsonPathTests {
          System.out.println(list);
 
          // make sure that every item in the list (each salary) is bigger than 100
-         assertThat(list, everyItem(greaterThan(100)));
+         assertThat(list, everyItem(greaterThan(1000)));
      }
 
 }

@@ -12,7 +12,7 @@ public class ThisIsTestTTT {
 
     @BeforeAll
     public static void setUp() {
-        baseURI = "http://ec2-34-201-69-55.compute-1.amazonaws.com:8000/";
+        baseURI = "http://ec2-52-91-94-225.compute-1.amazonaws.com:8000/";
     }
 
 

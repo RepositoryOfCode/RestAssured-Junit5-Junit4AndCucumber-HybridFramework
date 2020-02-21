@@ -107,7 +107,7 @@ public class CreateSpartansss {
      */
     @Test
     public void postANewSpartannnnnn(){
-        Spartan spartan = new Spartan("Male", "Neo Prime", 2022020022);
+        Spartan spartan = new Spartan("Male", "Nerrro Prime", 2022020022);
 
         spartan.toString();
         given().log().everything().
@@ -145,14 +145,18 @@ public class CreateSpartansss {
      * @return response
      */
     public Response createSpartan(Spartan spartan){
-        return null;
+        Response response = given().contentType(ContentType.JSON).and().accept(ContentType.JSON)
+                .body(spartan).post("api/spartans");
+        response.then().statusCode(201);
+        return response.jsonPath().get();
     }
 
+    public static void main(String[] args) {
+        CreateSpartansss obj = new CreateSpartansss();
+        Spartan s = new Spartan("Male","UUUvasia",22345032);
+        System.out.println(obj.createSpartan(s));
 
-
-
-
-
+    }
 }
 
 

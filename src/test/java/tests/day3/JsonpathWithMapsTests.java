@@ -26,7 +26,7 @@ public class JsonpathWithMapsTests {
     public void employeeInformationTest() {
         JsonPath jsonPath = given().pathParam("id", 100).
                 contentType(ContentType.JSON).
-                when().get("http://ec2-34-201-69-55.compute-1.amazonaws.com:1000/ords/hr/employees/{id}")
+                when().get("http://ec2-52-91-94-225.compute-1.amazonaws.com:1000/ords/hr/employees/{id}")
                 .jsonPath();
 
 //        jsonPath.prettyPrint();
