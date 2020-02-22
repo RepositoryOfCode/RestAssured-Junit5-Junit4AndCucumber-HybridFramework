@@ -16,7 +16,6 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
         this.role = role;
-
     }
 
     @Override
